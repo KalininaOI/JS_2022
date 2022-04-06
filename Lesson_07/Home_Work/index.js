@@ -44,8 +44,9 @@
 // 2. Написать функцию, которая будет принимать массив чисел, и будет убирать повторяющиеся значения из переданного массива, 
 // в качестве результата возвращать новый массив с уникальными значениями из исходного.
 
-// const myArr = [1,2,3,2,4,4];
+const myArr = [1,2,3,2,4,4];
 
+// через FOR
 // const uniqueElem = (arr) => {
 //     let uniqueArr = [];
 //     for (let i = 0; i < arr.length; i++) {
@@ -53,6 +54,17 @@
 //             uniqueArr.push(arr[i]);
 //         }
 //     }
+//     return uniqueArr;
+// }
+
+// через forEach
+// const uniqueElem = (arr) => {
+//     let uniqueArr = [];
+//     arr.forEach((element) => {
+//         if (!uniqueArr.includes(element)) {
+//             uniqueArr.push(element);
+//         }; 
+//     });     
 //     return uniqueArr;
 // }
 
@@ -77,6 +89,16 @@
 //     return true;
 // }
 
+// const myArr1 = [1,2,3,4];
+// const myArr2 = [1,2,3,4];
+
+// const compareArrs = (arr1, arr2) => {
+//     if (arr1.length != arr2.length) {
+//         return false;
+//     }
+//     const res = arr1.every( (el, i) => el === arr2[i]);
+//     return res;
+// };
 // console.log(compareArrs(myArr1, myArr2));
 
 // ПРАКТИКА 2
@@ -101,9 +123,9 @@
 
 // const myArr = [1,2,3,4,5,6,10]
 
-// const evenSum = (arr) => {
+// const evenSum = (...args) => {
 //     let sum = 0;
-//     for (let variable of arr) {
+//     for (let variable of args) {
 //         if (variable % 2 === 0) {
 //             sum += variable;
 //         }
@@ -151,7 +173,7 @@
 //         newNumbers.push(sum);
 //         return sum + item;
 //       });
-    
+//       newNumbers.push(totalSum);
 //       return newNumbers;
 // };
 
